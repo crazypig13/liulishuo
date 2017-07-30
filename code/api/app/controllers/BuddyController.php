@@ -21,12 +21,6 @@ use yii\web\NotFoundHttpException;
 
 class BuddyController extends Controller
 {
-    function actionTest(){
-//        return QyService::test();
-        error_log("test");
-        return 100;
-    }
-
     function actionIndex(){
         User::setFormat('buddy_list');
         Yii::$app->eventHandler->send(AppEvent::EVENT_USER_READED);
