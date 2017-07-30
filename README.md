@@ -8,7 +8,7 @@ test1@ff.com ~ test5@ff.com
 
 ## 项目说明
 + 代码为前后端分离，前端为angularjs，后端为php
-+ 在chrome下开发，所以建议有chrome测试，没有考虑其他浏览器兼容性
++ 在chrome下开发，所以建议用chrome测试，没有考虑其他浏览器兼容性
 
 ## 后端
 + 工程路径: code/api
