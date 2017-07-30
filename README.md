@@ -24,4 +24,5 @@ test1@ff.com ~ test5@ff.com
 + 工程路径：code/web/site/project
 + 可在router.js中看到前端代码地图，分为 /login, /register, /app
 其中 /app 中根据hash路由动态加载子模块，如登录后的好友列表 #/app/user/list，将加载project下的user/controller.js（控制器）和user/views/list.html（视图）
++ 未读消息数、聊天新消息、新的联系人均为自动刷新
 + 事件处理，前端/app模块将轮询调用后端接口/api/app/buddy/check-new检查是否有变更，子模块 /app/user/info、 /app/user/list、/app/user/history将在载入时添加listener，监听这些变更中的自己需要的部分并刷新数据。这些子模块的listener将在子模块切换时得到清除。
