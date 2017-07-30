@@ -1,7 +1,7 @@
 # liulishuo
 
 ## demo
-[demo地址](http://121.42.45.187/site/admin/mt/#/login)
+[demo地址](http://121.42.45.187/site/#/login)
 测试帐户：
 test1@ff.com ~ test5@ff.com
 密码全部为 123456
