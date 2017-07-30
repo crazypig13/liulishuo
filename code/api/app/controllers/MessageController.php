@@ -22,12 +22,6 @@ use yii\web\NotFoundHttpException;
 
 class MessageController extends Controller
 {
-    function actionTest(){
-//        return QyService::test();
-        error_log("test");
-        return 100;
-    }
-
     function actionIndex(){
         $to_id = intval(Yii::$app->request->get('to_id'));
         User::findOneOrError($to_id, "用户不存在");

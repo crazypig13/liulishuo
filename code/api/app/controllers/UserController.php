@@ -20,23 +20,6 @@ use yii\web\NotFoundHttpException;
 
 class UserController extends Controller
 {
-    function actionTest(){
-//        return QyService::test();
-        error_log("test");
-        return 100;
-    }
-
-    function actionMock(){
-        $params = Yii::$app->request->get();
-        $params['debug'] = 1;
-
-        $user = User::findOneOrError(1);
-
-        Yii::$app->user->login($user);
-
-        return $user;
-    }
-
     function actionLogout(){
         Yii::$app->user->logout();
         return Util::success();
