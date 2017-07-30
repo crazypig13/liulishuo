@@ -1,0 +1,41 @@
+<div class="padding">
+    <h2>
+        好友列表
+    </h2>
+    <div class="mb30">
+        邮箱：<input ng-model="vm.buddy_req.mail">
+        <button ng-click="vm.addBuddy()">添加</button>
+    </div>
+    <!--<div>{{root.user.corp.name}}</div>-->
+
+    <table class="table table-bordered table-hover table-striped">
+        <tr>
+            <th>好友邮箱</th>
+            <th>未读消息数</th>
+            <th>操作</th>
+        </tr>
+
+        <tr ng-repeat="item in vm.items">
+            <td>{{item.mail}}</td>
+            <td>{{item.unread}}</td>
+            <td>
+                <a class="btn btn-info" ng-href="#/app/user/info/{{item.id}}">聊天</a>
+                <a class="btn btn-danger" ng-click="vm.deleteBuddy(item)">删除</a>
+            </td>
+        </tr>
+    </table>
+
+    <div class="text-right mt10">
+        <uib-pagination
+                items-per-page="vm._meta.perPage"
+                boundary-links="true"
+                max-size="5"
+                ng-change="vm.pageChanged()"
+                total-items="vm._meta.totalCount"
+                ng-model="vm._meta.currentPage"
+                previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;"
+                last-text="&raquo;"></uib-pagination>
+
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+<div class="alert-wrap " ng-if="vm.alerts.length" ng-class="{' show':vm.alerts.length}" style="display: none;">
+    <uib-alert ng-repeat="alert in vm.alerts" type="{{alert.type}}" close="alert.close()"><span
+            class="glyphicon glyphicon-info-sign"> </span> {{alert.msg}}
+    </uib-alert>
+</div>
+<div class="sidebar">
+    <div class="logo-con">
+        <h4>笔试题</h4>
+    </div>
+    <ul class="side-nav ng-isolate-scope">
+        <!-- ngRepeat: item in vm.list -->
+        <li class="ng-scope" ng-class="{active:menu_active=='quest'}">
+            <a href="#/app/user/list" class="ng-binding" ng-click="menu_active='quest'">好友列表
+                <span class="red" style="font-size: xx-small" ng-if="root.new_message">新消息</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <!-- ngInclude: --><ng-include src="'project/main/views/top-bar.html'" class="ng-scope"></ng-include>
+    <!--ui-view-->
+    <!-- uiView: --><div class="view  clearfix view-content" full-height="" ui-view style="min-height: 929px;"></div>
+    <!-- ngInclude: --><ng-include src="'project/main/views/footer.html'" class="ng-scope"></ng-include>
+</div>
+

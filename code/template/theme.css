@@ -1,0 +1,31 @@
+.theme-body .button-theme {
+    background: %1$s !important;
+    border-color: %2$s !important;
+}
+
+.theme-body .bar-theme {
+    background: %1$s !important;
+}
+
+.theme-body .menu-icon.theme {
+    border-color: %2$s !important;
+}
+
+.theme-body .theme {
+    background: %1$s !important;
+}
+
+.theme-body .theme-border {
+    border-color: %1$s !important;
+}
+
+.theme-body .theme-border-dark {
+    border-color: %2$s !important;
+}
+
+.theme-body .theme-color {
+    color: %1$s !important;
+
+}.theme-body .theme-color-dark {
+     color: %2$s !important;
+}

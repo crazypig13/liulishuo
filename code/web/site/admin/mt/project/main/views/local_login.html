@@ -1,0 +1,54 @@
+<div class="alert-wrap " ng-if="vm.alerts.length" ng-class="{' show':vm.alerts.length}" style="display: none;">
+    <uib-alert ng-repeat="alert in vm.alerts" type="{{alert.type}}" close="alert.close()"><span
+            class="glyphicon glyphicon-info-sign"> </span> {{alert.msg}}
+    </uib-alert>
+</div>
+<style>
+    .form-signin {
+        max-width: 500px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    .form-signin .form-signin-heading,
+    .form-signin .checkbox {
+        margin-bottom: 10px;
+    }
+    .form-signin .checkbox {
+        font-weight: normal;
+    }
+    .form-signin .form-control {
+        position: relative;
+        height: auto;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .form-signin .form-control:focus {
+        z-index: 2;
+    }
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+</style>
+<div class="container">
+
+    <form class="form-signin">
+        <h2 class="form-signin-heading">笔试</h2>
+        <label class="sr-only">用户名</label>
+        <input type="text"  ng-model="vm.req.mail" class="form-control" placeholder="请输入邮箱" required autofocus>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input type="password" id="inputPassword" ng-model="vm.req.password" class="form-control" placeholder="密码" required>
+        <button class="btn btn-lg btn-primary btn-block" ng-click="vm.login()">登录</button>
+        <a class="btn btn-lg btn-default btn-block mt10" href="#/reg">注册</a>
+    </form>
+
+</div> <!-- /container -->

@@ -1,0 +1,27 @@
+<div class="padding">
+    <h3>
+        聊天【{{vm.buddy.mail}}】
+        <a class="btn btn-default" href="#/app/user/list">返回</a>
+        <a class="btn btn-default" ng-href="#/app/user/history/{{vm.id}}">历史</a>
+    </h3>
+    <div style="height:350px; overflow-y: scroll" id="chat_field">
+        <ul>
+            <li ng-repeat="msg in vm.messages">
+                <div ng-if="msg.from_id==vm.buddy.id" class="blue">[{{msg.created_at|limitTo:11:5}}]{{vm.buddy.mail}}:</div>
+                <div ng-if="msg.to_id==vm.buddy.id" class="green">[{{msg.created_at|limitTo:11:5}}]我:
+                <a class="btn btn-sm" ng-if="msg.status=='enable'" ng-click="vm.deleteMsg(msg)">删除</a>
+                </div>
+                <pre style="white-space: pre-wrap; word-wrap: break-word">{{msg.message}}</pre>
+            </li>
+        </ul>
+
+    </div>
+    <div>
+        <textarea cols="60" rows="5" ng-model="vm.req.message">
+
+        </textarea>
+        <br>
+        <a class="btn btn-default" ng-click="vm.saveMsg()">提交</a>
+    </div>
+</div>
+

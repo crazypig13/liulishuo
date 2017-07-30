@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font: 14px/2 'microsoft yahei';
+            color: #333;;
+        }
+
+        ul, li, ol {
+            list-style: none;
+        }
+
+        .container {
+            padding: 15px;
+        }
+
+        .container h4 {
+            font-size: 18px;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .container > dl > dt {
+            background: #2d8728;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: #fff;
+        }
+
+        .container > dl > dd {
+            margin: 15px;
+        }
+
+        .container .content {
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .tit {
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h4>个人简历</h4>
+    <dl class="info">
+        <dt>基本信息</dt>
+        <dd>
+            <ul class="content">
+                <li><span class="tit">姓名：</span>%s</li>
+                <li><span class="tit">性别：</span>%s</li>
+                <li><span class="tit">年龄：</span>%u</li>
+                <li><span class="tit">手机：</span>%s</li>
+                <li><span class="tit">邮箱：</span>%s</li>
+                <li><span class="tit">工作经验：</span>%u</li>
+            </ul>
+        </dd>
+    </dl>
+    <dl class="edu">
+        <dt>教育经历</dt>
+        <dd>
+            @
+            <ul class="content">
+                <li><span class="tit">%s</span></li>
+                <li><span class="tit">开始时间：</span>%s</li>
+                <li><span class="tit">结束时间：</span>%s</li>
+                <li><span class="tit">学历：</span>%s</li>
+                <li><span class="tit">专业：</span>%s</li>
+            </ul>
+            @
+        </dd>
+        <dd></dd>
+    </dl>
+    <dl class="exp">
+        <dt>工作经历</dt>
+        <dd>
+            @
+            <ul class="content">
+                <li><span class="tit">%s</span></li>
+                <li><span class="tit">开始时间：</span>%s</li>
+                <li><span class="tit">结束时间：</span>%s</li>
+                <li><span class="tit">职位：</span>%s</li>
+                <li>
+                    <span class="tit">工作描述：</span>%s
+                </li>
+            </ul>
+            @
+        </dd>
+    </dl>
+</div>
+</body>
+</html>
