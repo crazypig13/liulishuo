@@ -1,4 +1,4 @@
-# liulishuo
+# 私信系统demo
 
 ## demo
 [demo地址](http://121.42.45.187/site/#/login)
